@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Competition Estimator</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/css/mdb.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <main class="container-fluid">
+
+    <h1>App Challenge 1 (Client-side App)</h1>
+    <h3>Given number of students applying and count of open positions, display students per position </h3>
+
+
+    <p>Enter number of students:
+      <input id="students" type="number" >
+    </p>
+
+    <p>Enter number of positions:
+      <input id="positions" type="number" >
+    </p>
+    <button id="clicker" class="btn btn-primary">Click me!</button>
+
+    <p id="result"></p>
+
+  </main>
+
+  <script>
+    console.log('SCRIPT START')
+    console.log('Declare testable functions.....................')
+    function div(x, y) {
+      return students/positions
+    }
+    console.log('Defined div=' + div)
+    console.log('Declare event listeners .......................')
+    document.getElementById('clicker').addEventListener('click', function () {
+      const i = parseFloat(document.getElementById('students').value)
+      console.log('i=' + i)
+      const j = parseFloat(document.getElementById('positions').value)
+      console.log('j=' + j)
+      const ans = 'students per position is ' + div(i, j) + '.'
+      document.getElementById('result').innerHTML = ans
+    })
+    console.log('SCRIPT END')
+  </script>
